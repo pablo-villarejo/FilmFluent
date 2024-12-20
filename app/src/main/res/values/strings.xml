@@ -6,4 +6,8 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="loading">Loading...</string>
+    <string name="random_movie">Random Movie</string>
+    <string name="random_movie_text">If you have no idea what to watch… Let us suggest a movie for you!</string>
+    <string name="add_movie">Add Movie</string>
+    <string name="add_movie_text">Or you can add a movie you\'ve already watched:</string>
 </resources>
