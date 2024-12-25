@@ -1,5 +1,6 @@
 package com.example.filmfluent;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -34,8 +35,8 @@ public class MoviesDatabase {
         Cursor cursor = db.query(MoviesContract.MovieEntry.TABLE_NAME, columns, null, null, null, null, null);
         try {
             while (cursor.moveToNext()) {
-                String title = cursor.getString(cursor.getColumnIndex(MoviesContract.MovieEntry.COLUMN_NAME_TITLE));
-                float rating = cursor.getFloat(cursor.getColumnIndex(MoviesContract.MovieEntry.COLUMN_NAME_RATING));
+                @SuppressLint("Range") String title = cursor.getString(cursor.getColumnIndex(MoviesContract.MovieEntry.COLUMN_NAME_TITLE));
+                @SuppressLint("Range") float rating = cursor.getFloat(cursor.getColumnIndex(MoviesContract.MovieEntry.COLUMN_NAME_RATING));
                 movies.add(title + " (" + rating + ")");
             }
         } finally {
@@ -44,6 +45,7 @@ public class MoviesDatabase {
         return movies;
     }
 
+    @SuppressLint("Range")
     public float getMovieRating(String title) {
         float rating = -1;
         String[] columns = {
