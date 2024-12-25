@@ -20,4 +20,10 @@
     <string name="please_enter_movie_title">Por favor, introduce un título de película.</string>
     <string name="movie_added_successfully">¡Película añadida correctamente!</string>
     <string name="error_adding_movie">Error al añadir la película. Por favor, inténtalo de nuevo.</string>
+    <string name="movies_list">Lista de Películas</string>
+    <string name="delete_movie">Eliminar Película</string>
+    <string name="confirm_delete_movie">¿Estás seguro de que deseas eliminar %1$s?</string>
+    <string name="movie_deleted">%1$s ha sido eliminada.</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
 </resources>

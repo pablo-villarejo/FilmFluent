@@ -19,4 +19,10 @@
     <string name="please_enter_movie_title">Please enter a movie title.</string>
     <string name="movie_added_successfully">Movie added successfully!</string>
     <string name="error_adding_movie">Error adding movie. Please try again.</string>
+    <string name="movies_list">Movies List</string>
+    <string name="delete_movie">Delete Movie</string>
+    <string name="confirm_delete_movie">Are you sure you want to delete %1$s?</string>
+    <string name="movie_deleted">%1$s has been deleted.</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
 </resources>
