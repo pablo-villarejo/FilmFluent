@@ -26,4 +26,7 @@
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="no_movies_found">No movies found. Please add some movies!</string>
+    <string name="sort_asc">Sort by Rating (Ascending)</string>
+    <string name="sort_desc">Sort by Rating (Descending)</string>
+    <string name="clear_filters">Clear Filters</string>
 </resources>

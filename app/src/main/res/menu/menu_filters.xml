@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_asc"
+        android:title="@string/sort_asc" />
+    <item
+        android:id="@+id/sort_desc"
+        android:title="@string/sort_desc" />
+    <item
+        android:id="@+id/clear_filters"
+        android:title="@string/clear_filters" />
+</menu>

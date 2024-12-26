@@ -27,4 +27,7 @@
     <string name="delete">Eliminar</string>
     <string name="cancel">Cancelar</string>
     <string name="no_movies_found">No se han encontrado películas. ¡Por favor, añade algunas películas!</string>
+    <string name="sort_asc">Ordenar por calificación (ascendente)</string>
+    <string name="sort_desc">Ordenar por calificación (descendente)</string>
+    <string name="clear_filters">Limpiar filtros</string>
 </resources>
