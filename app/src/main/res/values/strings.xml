@@ -25,4 +25,5 @@
     <string name="movie_deleted">%1$s has been deleted.</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="no_movies_found">No movies found. Please add some movies!</string>
 </resources>

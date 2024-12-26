@@ -13,8 +13,8 @@ public class MoviesDatabase {
 
     private SQLiteDatabase db;
 
-    public MoviesDatabase(Context context, String dbName) {
-        MoviesDbHelper dbHelper = new MoviesDbHelper(context, dbName);
+    public MoviesDatabase(Context context) {
+        MoviesDbHelper dbHelper = new MoviesDbHelper(context);
         db = dbHelper.getWritableDatabase();
     }
 

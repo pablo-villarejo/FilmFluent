@@ -26,4 +26,5 @@
     <string name="movie_deleted">%1$s ha sido eliminada.</string>
     <string name="delete">Eliminar</string>
     <string name="cancel">Cancelar</string>
+    <string name="no_movies_found">No se han encontrado películas. ¡Por favor, añade algunas películas!</string>
 </resources>

@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.List;
+
 public class AddMovieActivity extends AppCompatActivity {
 
     private MoviesDatabase moviesDatabase;
@@ -31,7 +33,7 @@ public class AddMovieActivity extends AppCompatActivity {
         });
 
         // Initialize database
-        moviesDatabase = new MoviesDatabase(this, "movies.db");
+        moviesDatabase = new MoviesDatabase(this);
 
         // UI elements
         EditText titleInput = findViewById(R.id.movie_title_input);

@@ -36,9 +36,7 @@ public class ListMoviesActivity extends AppCompatActivity {
             return insets;
         });
 
-        moviesDatabase = new MoviesDatabase(this, "movies_db");
-        List<String> movies = moviesDatabase.getAllMovies();
-        Toast.makeText(this, "Movies: " + movies.toString(), Toast.LENGTH_LONG).show();
+        moviesDatabase = new MoviesDatabase(this);
         setupRecyclerView();
     }
 
@@ -47,10 +45,14 @@ public class ListMoviesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         List<String> movies = moviesDatabase.getAllMovies();
+        if (movies.isEmpty()) {
+            Toast.makeText(this, getString(R.string.no_movies_found), Toast.LENGTH_SHORT).show();
+        }
+
         adapter = new MoviesAdapter(movies, this::showDeleteConfirmationDialog);
         recyclerView.setAdapter(adapter);
-
     }
+
 
     private void showDeleteConfirmationDialog(String movieTitle) {
         new AlertDialog.Builder(this)
@@ -61,9 +63,16 @@ public class ListMoviesActivity extends AppCompatActivity {
                 .show();
     }
 
+    private String extractTitle(String movieTitle) {
+        return movieTitle.replaceAll("\\s*\\(.*\\)$", "").trim();
+    }
+
+
     private void deleteMovie(String movieTitle) {
-        moviesDatabase.deleteMovie(movieTitle);
-        Toast.makeText(this, getString(R.string.movie_deleted, movieTitle), Toast.LENGTH_SHORT).show();
+        String actualTitle = extractTitle(movieTitle); // Extrae solo el título
+        moviesDatabase.deleteMovie(actualTitle);
+        Toast.makeText(this, getString(R.string.movie_deleted, actualTitle), Toast.LENGTH_SHORT).show();
         adapter.updateMovies(moviesDatabase.getAllMovies());
     }
+
 }
