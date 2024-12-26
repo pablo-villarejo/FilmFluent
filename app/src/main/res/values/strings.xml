@@ -9,13 +9,13 @@
     <string name="random_movie">Random Movie</string>
     <string name="random_movie_text">If you have no idea what to watch… Let us suggest a movie for you!</string>
     <string name="add_movie">Add Movie</string>
-    <string name="add_movie_text">Or you can add a movie you\'ve already watched</string>
+    <string name="add_movie_text">Add a movie you\'ve already watched</string>
     <string name="list_movies">List Movies</string>
     <string name="list_movies_text">Take a look at your movies</string>
     <string name="rating">Rating:&#160;</string>
     <string name="enter_movie_title">Enter movie title</string>
     <string name="save_movie">Save Movie</string>
-    <string name="rating_2_5">Rating: 2.5</string>
+    <string name="rating_2_5">Rating: 2.5 / 5</string>
     <string name="please_enter_movie_title">Please enter a movie title.</string>
     <string name="movie_added_successfully">Movie added successfully!</string>
     <string name="error_adding_movie">Error adding movie. Please try again.</string>

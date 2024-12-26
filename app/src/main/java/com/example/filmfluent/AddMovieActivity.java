@@ -47,7 +47,7 @@ public class AddMovieActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 float rating = progress / 2.0f; // Convert progress to 0.5 intervals
-                ratingValue.setText(getString(R.string.rating) + rating);
+                ratingValue.setText(getString(R.string.rating) + rating + " / 5");
             }
 
             @Override

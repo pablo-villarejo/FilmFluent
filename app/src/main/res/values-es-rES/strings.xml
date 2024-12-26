@@ -10,13 +10,13 @@
     <string name="random_movie">Película Aleatoria</string>
     <string name="random_movie_text">Si no sabes qué ver… ¡Déjanos recomendarte una película!</string>
     <string name="add_movie">Añadir película</string>
-    <string name="add_movie_text">O puedes añadir alguna película que ya hayas visto</string>
+    <string name="add_movie_text">Añade alguna película que ya hayas visto</string>
     <string name="list_movies">Listar películas</string>
     <string name="list_movies_text">Echa un vistazo a tus películas</string>
     <string name="rating">Puntuación:&#160;</string>
     <string name="enter_movie_title">Introduce el título de la película</string>
     <string name="save_movie">Guardar película</string>
-    <string name="rating_2_5">Puntuación: 2.5</string>
+    <string name="rating_2_5">Puntuación: 2.5 / 5</string>
     <string name="please_enter_movie_title">Por favor, introduce un título de película.</string>
     <string name="movie_added_successfully">¡Película añadida correctamente!</string>
     <string name="error_adding_movie">Error al añadir la película. Por favor, inténtalo de nuevo.</string>
