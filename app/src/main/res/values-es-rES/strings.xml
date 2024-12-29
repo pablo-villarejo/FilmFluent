@@ -30,4 +30,5 @@
     <string name="sort_asc">Ordenar por calificación (ascendente)</string>
     <string name="sort_desc">Ordenar por calificación (descendente)</string>
     <string name="clear_filters">Limpiar filtros</string>
+    <string name="ClickMe">Púlsame!</string>
 </resources>
