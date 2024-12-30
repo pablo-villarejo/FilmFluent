@@ -11,54 +11,88 @@
     <!-- Title Input -->
     <EditText
         android:id="@+id/movie_title_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background"
         android:hint="@string/enter_movie_title"
         android:inputType="text"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
-
-    <!-- Rating Slider -->
-    <SeekBar
-        android:id="@+id/movie_rating_slider"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:max="10"
-        android:progress="5"
-        app:layout_constraintTop_toBottomOf="@id/movie_title_input"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Display Rating Value -->
-    <TextView
-        android:id="@+id/movie_rating_value"
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/search_movie_button"
+        android:layout_width="156dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/blue_fluent"
+        android:text="@string/search_movie"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_title_input" />
+
+    <!-- RatingBar -->
+    <RatingBar
+        android:id="@+id/movie_rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rating_2_5"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/movie_rating_slider"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:progressTint="@color/blue_fluent"
+        android:rating="0"
+        android:stepSize="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_movie_button" />
 
-    <!-- Save Button -->
+    <ScrollView
+        android:id="@+id/movie_scroll_view"
+        android:layout_width="409dp"
+        android:layout_height="598dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/save_movie_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_rating_bar">
+
+        <GridLayout
+            android:id="@+id/movie_cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:columnCount="3"
+            android:padding="8dp"></GridLayout>
+
+    </ScrollView>
+
+
+    <!-- Save Movie Button -->
     <Button
         android:id="@+id/save_movie_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/save_movie"
+        android:layout_width="197dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/blue_fluent"
+        android:text="@string/save_movie"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/movie_rating_value"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

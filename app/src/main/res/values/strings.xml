@@ -30,4 +30,9 @@
     <string name="sort_desc">Sort by Rating (Descending)</string>
     <string name="clear_filters">Clear Filters</string>
     <string name="ClickMe">Click Me!</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_message_error">Something went wrong. Please try again later.</string>
+    <string name="dialog_button_ok">Ok</string>
+    <string name="search_movie">Search</string>
+    <string name="movie_title">Movie Title</string>
 </resources>

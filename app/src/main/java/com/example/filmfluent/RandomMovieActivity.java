@@ -1,5 +1,7 @@
 package com.example.filmfluent;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -79,6 +82,7 @@ public class RandomMovieActivity extends AppCompatActivity {
 
             } catch (Exception e) {
                 Log.e("RandomMovieActivity", "Error fetching movie", e);
+                showErrorDialog();
             }
 
             return movieDetails;
@@ -95,6 +99,14 @@ public class RandomMovieActivity extends AppCompatActivity {
                         .load(movieDetails[1])
                         .into(moviePosterImage);
             }
+        }
+
+        private void showErrorDialog() {
+            new AlertDialog.Builder(RandomMovieActivity.this)
+                    .setTitle(getString(R.string.dialog_title_error)) // Use string resource for title
+                    .setMessage(getString(R.string.dialog_message_error)) // Use string resource for message
+                    .setPositiveButton(getString(R.string.dialog_button_ok), null) // Use string resource for button text
+                    .show();
         }
     }
 }
