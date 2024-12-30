@@ -35,4 +35,8 @@
     <string name="dialog_button_ok">Ok</string>
     <string name="search_movie">Search</string>
     <string name="movie_title">Movie Title</string>
+    <string name="confirm">Confirm Rating</string>
+    <string name="save_confirmation">"Do you want to save the movie "</string>
+    <string name="with_rating">with the rating</string>
+    <string name="select_valid_movie">Please select a movie from the list</string>
 </resources>

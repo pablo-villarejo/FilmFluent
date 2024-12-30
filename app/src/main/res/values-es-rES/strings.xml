@@ -31,4 +31,13 @@
     <string name="sort_desc">Ordenar por calificación (descendente)</string>
     <string name="clear_filters">Limpiar filtros</string>
     <string name="ClickMe">Púlsame!</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_message_error">Algo ha ido mal. Por favor vuelve a intentarlo más adelante</string>
+    <string name="dialog_button_ok">Aceptar</string>
+    <string name="search_movie">Buscar</string>
+    <string name="movie_title">Título</string>
+    <string name="confirm">Confirmar Valoración</string>
+    <string name="save_confirmation">¿Quieres guardar la película</string>
+    <string name="with_rating">con la puntuación</string>
+    <string name="select_valid_movie">Por favor selecciona una película de la lista</string>
 </resources>

@@ -56,7 +56,7 @@ public class AddMovieActivity extends AppCompatActivity {
             if (!query.isEmpty()) {
                 new SearchMoviesTask().execute(query);
             } else {
-                Toast.makeText(AddMovieActivity.this, "Please enter a movie title", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddMovieActivity.this, R.string.enter_movie_title, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -67,32 +67,32 @@ public class AddMovieActivity extends AppCompatActivity {
                 float rating = ratingBar.getRating();
 
                 if (title.isEmpty()) {
-                    Toast.makeText(AddMovieActivity.this, "Please select a movie", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMovieActivity.this, R.string.enter_movie_title, Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                String message = getString(R.string.save_confirmation) + " " + title + " "  + getString(R.string.with_rating) + " "  + rating + "?";
                 // Show confirmation dialog before saving
                 new AlertDialog.Builder(AddMovieActivity.this)
-                        .setTitle("Confirm Save")
-                        .setMessage("Do you want to save the movie \"" + title + "\" with the rating " + rating + "?")
-                        .setPositiveButton("OK", (dialog, which) -> {
+                        .setTitle(R.string.confirm)
+                        .setMessage(message)
+                        .setPositiveButton(R.string.dialog_button_ok, (dialog, which) -> {
                             // Save the movie to the database
                             try {
                                 moviesDatabase.addMovie(title, rating);
-                                Toast.makeText(AddMovieActivity.this, "Movie added successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddMovieActivity.this, R.string.movie_added_successfully, Toast.LENGTH_SHORT).show();
                                 titleInput.setText(""); // Clear title input
                                 ratingBar.setRating(0); // Reset rating bar
                             } catch (Exception e) {
-                                Toast.makeText(AddMovieActivity.this, "Error adding movie: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddMovieActivity.this, R.string.error_adding_movie + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         })
-                        .setNegativeButton("Cancel", (dialog, which) -> {
+                        .setNegativeButton(R.string.cancel, (dialog, which) -> {
                             // Close the dialog without doing anything
                             dialog.dismiss();
                         })
                         .show();
             } else {
-                Toast.makeText(AddMovieActivity.this, "Please select a valid movie from the list", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddMovieActivity.this, R.string.select_valid_movie, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -177,7 +177,7 @@ public class AddMovieActivity extends AppCompatActivity {
                     }
                 }
             } else {
-                Toast.makeText(AddMovieActivity.this, "No movies found", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddMovieActivity.this, R.string.no_movies_found, Toast.LENGTH_SHORT).show();
             }
         }
     }
